@@ -1,41 +1,37 @@
-# ⚛️ The Interactive React.js Handbook
+# ⚛️ The Complete React.js Handbook
 
-A self-paced, interactive guide to mastering React. Click on the arrows **(▶)** to reveal notes, code examples, and deep dives.
+A comprehensive, single-file reference for React.js concepts, hooks, and patterns.
+
+## 📋 Table of Contents
+1. [Core Concepts](#1-core-concepts)
+2. [JSX Rules](#2-jsx-rules)
+3. [Components & Props](#3-components--props)
+4. [State Management (useState)](#4-state-management-usestate)
+5. [Side Effects (useEffect)](#5-side-effects-useeffect)
+6. [Events & Forms](#6-events--forms)
+7. [Advanced Hooks](#7-advanced-hooks)
+8. [Context API (Global State)](#8-context-api-global-state)
+9. [React Router (Navigation)](#9-react-router-v6)
+10. [Performance Optimization](#10-performance-optimization)
+11. [Recommended Folder Structure](#11-recommended-folder-structure)
 
 ---
 
-## 🗺️ Interactive Navigation
-1. [The Fundamentals](#-1-the-fundamentals)
-2. [State & Events](#-2-state--events)
-3. [The Hooks Ecosystem](#-3-the-hooks-ecosystem)
-4. [Routing (React Router)](#-4-routing-react-router)
-5. [Global State (Context)](#-5-global-state-management)
-6. [Performance](#-6-performance-optimization)
-7. [✅ Your Progress Checklist](#-your-learning-checklist)
+## 1. Core Concepts
 
----
+### What is React?
+A JavaScript library for building user interfaces based on **Components**.
+* **Declarative:** You tell React *what* the UI should look like, not *how* to update the DOM.
+* **Virtual DOM:** React keeps a copy of the DOM in memory. When state changes, it compares the new Virtual DOM with the old one (**Diffing**) and updates only the changed parts in the real DOM (**Reconciliation**).
 
-## 🧱 1. The Fundamentals
 
-<details>
-<summary><strong>What is React & Virtual DOM?</strong> (Click to expand)</summary>
 
-* **React:** A JS library for building UIs based on *components*.
-* **Virtual DOM:** A lightweight copy of the real DOM.
-    1.  State changes.
-    2.  React calculates the difference (**Diffing**).
-    3.  React updates *only* the changed nodes in the real DOM (**Reconciliation**).
-</details>
+[Image of React Virtual DOM flow]
 
-<details>
-<summary><strong>JSX Rules (JavaScript XML)</strong></summary>
 
-JSX looks like HTML, but it is JavaScript syntax sugar.
-1.  **Wrap in one parent:** Return a single element or use a Fragment `<> ... </>`.
-2.  **Close all tags:** `<img />` (self-closing).
-3.  **camelCase:** Use `className`, `onClick`, `htmlFor`.
-4.  **JavaScript Mode:** Use `{ curly braces }` to insert variables.
-
-```jsx
-const name = "Dev";
-const element = <h1>Hello, {name}</h1>;
+### Setup
+```bash
+npm create vite@latest my-app -- --template react
+cd my-app
+npm install
+npm run dev
